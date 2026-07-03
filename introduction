@@ -42,3 +42,21 @@ use post build action for build automation.
 --> it run test
 --> deploy code
 
+
+pipeline plugin 
+PULL --- > BUILD ---> TEST ---> DEPLOY
+
+pipeline plugin ---> Jenkinsfile
+-two type of jenkins pipeline:
+1. scripted pipeline
+2. declarative pipeline
+
+scripted pipeline                               declarative pipeline
+  older style                                    latest / recommended approch
+wriiten using groovy programmin                has fixed, strucured syntax
+language.
+complex                                                                                                                
+syntax start with node keyword              syntax start with pipeline keyword
+.groovy                                              .jdp
+
+pipeline stage view plugin  and pipeline plugin
