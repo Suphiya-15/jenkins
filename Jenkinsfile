@@ -9,7 +9,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn package -DskipTests'
+                sh '''
+                cd Backend
+                mvn package -DskipTests
+                '''
             }
         }
         stage('Test') {
