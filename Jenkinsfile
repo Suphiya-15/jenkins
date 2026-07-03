@@ -2,19 +2,24 @@ pipeline {
     agent any
 
     stages {
+        stage('Pull') {
+            steps {
+                echo 'Pulling sccessful'
+            }
+        }
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'mvn package -DskipTests'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing done..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying done....'
             }
         }
     }
